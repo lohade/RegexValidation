@@ -8,7 +8,8 @@ public class ValidationCalculate {
     Matcher matcher;
     String FirstName_validation="[A-Z]{1}+[a-z]{2,}";
     String LastName_validation="[A-Z]{1}+[a-z]{2,}";
-    //String email_validation="[a-zA-Z0-9.]+@[a-z.]+[a-z]";
+    String email_validation="[a-zA-Z0-9.]+@[a-z.]+[a-z]";
+    String mobile_validation="[0-9]{2}\\{0-9}{10}$";
 
 
     public void Firstvalidation(String name){
@@ -27,12 +28,20 @@ public class ValidationCalculate {
             System.out.println("Enter validate Surname");
         }
     }
-    /*public void email(String email){
+    public void email(String email){
         boolean result=Pattern.matches(email_validation,email);
         System.out.println(result);
         if(result==false){
             System.out.println("enter validation email");
         }
-    }*/
+    }
+
+    public void mobile(String mobile){
+        boolean value=Pattern.matches(mobile_validation,mobile);
+        System.out.println(value);
+        if (value==false){
+            System.out.println("enter proper mobile number");
+        }
+    }
 
 }
