@@ -9,7 +9,7 @@ public class ValidationMain {
         ValidationCalculate validationCalculate=new ValidationCalculate();
         boolean status=true;
         do {
-            System.out.println("1:first name validation:\n2:Last name validation:\n3:Email validation:\n4:Mobile validation:\n");
+            System.out.println("1:first name validation:\n2:Last name validation:\n3:Email validation:\n4:Mobile validation:\n5:Password validation:\n6:exit");
             int choice= scanner.nextInt();
             switch(choice) {
                 case 1:
@@ -37,6 +37,12 @@ public class ValidationMain {
                     break;
 
                 case 5:
+                    System.out.println("enter password:");
+                    String password= scanner.next();
+                    validationCalculate.password(password);
+                    break;
+
+                case 6:
                     status=false;
                     break;
             }
