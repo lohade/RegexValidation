@@ -9,7 +9,7 @@ public class ValidationCalculate {
     String Name="[A-Z]{1}+[a-z]{2,}";
     String email_validation="[a-zA-Z0-9.]+@[a-z.]+[a-z]";
     String mobile_validation="[0-9]{2}\\{0-9}{10}$";
-    String password_validation="[A-Za-z]{8}";
+    String password_validation="(.*?[A-Za-z]){8,}";
 
 
     public void Firstvalidation(String name){
